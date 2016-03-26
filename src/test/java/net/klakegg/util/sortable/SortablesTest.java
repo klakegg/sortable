@@ -10,7 +10,7 @@ public class SortablesTest {
 
     @Test
     public void simple() {
-        List<Object> list = new ArrayList<>();
+        List<Object> list = new ArrayList<Object>();
         list.add(new Order2());
         list.add(new OrderX(3));
         list.add(new OrderUnknown());
@@ -22,6 +22,11 @@ public class SortablesTest {
         Assert.assertTrue(list.get(1) instanceof Order1);
         Assert.assertTrue(list.get(2) instanceof Order2);
         Assert.assertTrue(list.get(3) instanceof OrderX);
+    }
+
+    @Test
+    public void simpleContructor() {
+        new Sortables();
     }
 
     class OrderUnknown {
