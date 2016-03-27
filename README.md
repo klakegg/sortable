@@ -1,21 +1,21 @@
 # Sortable
 
 [![Build Status](https://travis-ci.org/klakegg/sortable.svg?branch=master)](https://travis-ci.org/klakegg/sortable)
-[![](https://jitpack.io/v/klakegg/sortable.svg)](https://jitpack.io/#klakegg/sortable)
+[![JitPack](https://jitpack.io/v/klakegg/sortable.svg)](https://jitpack.io/#klakegg/sortable)
 
-This project aims to solve my tiny itch of sorting in Java. Sorting i Java is not hard, but now and then I find myself sorting object in a list where a uniform implementation of Comparable is not enough.
+This project aims to solve my tiny itch of sorting in Java. Sorting i Java is not hard, but now and then I find myself sorting objects in a list where a uniform implementation of Comparable is not enough.
 
 
-## Using Sortables
+## Using Sortable
 
 ```java
-// Using the annotation
+// Implementation using the annotation
 @Sort(1)
-class MyFirst {
+class MyFirstClass {
 
 }
 
-// Using the interface
+// Implementation using the interface
 class MySecondClass implements Sortable {
 
     @Override
@@ -24,10 +24,11 @@ class MySecondClass implements Sortable {
     }
 }
 
-// Putting them in a list:
+// Adding objects to a list:
 List<Object> list = new ArrayList<>();
 list.add(new MySecondClass());
 list.add(new MyFirstClass());
+list.add("String object.");
 
 // Sorting in Java 7:
 Sortables.sort(list);
@@ -36,4 +37,13 @@ Collections.sort(list, Sortables.comparator());
 // Sorting in Java 8:
 list.sort(Sortables.comparator());
 list.sort(comparing(Sortables::extract));
+
+// Writing result of sort
+for (Object o : list)
+    System.out.println(o);
+
+// Output:
+// String object.
+// MyFirstClass@1b0375b3
+// MySecondClass@2f7c7260
 ```
