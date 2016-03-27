@@ -1,4 +1,4 @@
-package net.klakegg.util.sortable;
+package net.klakegg.commons.sortable;
 
 public interface Sortable {
 

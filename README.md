@@ -30,4 +30,9 @@ list.add(new MyFirstClass());
 
 // Sorting in Java 6-7:
 Sortables.sort(list);
+Collections.sort(list, Sortables.comparator());
+
+// Sorting in Java 8:
+list.sort(Sortables.comparator());
+list.sort(comparing(Sortables::extract));
 ```
