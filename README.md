@@ -28,7 +28,7 @@ List<Object> list = new ArrayList<>();
 list.add(new MySecondClass());
 list.add(new MyFirstClass());
 
-// Sorting in Java 6-7:
+// Sorting in Java 7:
 Sortables.sort(list);
 Collections.sort(list, Sortables.comparator());
 
