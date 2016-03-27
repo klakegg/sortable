@@ -4,14 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class SortablesTest {
 
     @Test
     public void simple() {
-        List<Object> list = new ArrayList<Object>();
+        List<Object> list = new ArrayList<>();
         list.add(new Order2());
         list.add(new OrderX(3));
         list.add(new OrderY());
@@ -68,5 +67,4 @@ public class SortablesTest {
             return Integer.MIN_VALUE;
         }
     }
-
 }

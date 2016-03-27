@@ -8,12 +8,13 @@ import java.util.List;
 
 public class ReadmeExample {
 
+    // Implementation using annotation
     @Sort(1)
     class MyFirstClass {
 
     }
 
-    // Implementation using the interface
+    // Implementation using interface
     class MySecondClass implements Sortable {
 
         @Override

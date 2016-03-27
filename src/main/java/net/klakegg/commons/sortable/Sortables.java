@@ -11,13 +11,17 @@ public class Sortables {
 
     /**
      * Method extracting order value from a given object.
-     *
+     * <p>
      * Priority:
      * <ul>
-     *  <li>Implementation of Sortable if value higher than Integer.MIN_VALUE.</li>
+     *  <li>Implementation of Sortable if value higher than Integer.MIN_VALUE is returned.</li>
      *  <li>Annotation of Sort.</li>
      *  <li>Returns 0.</li>
      * </ul>
+     *
+     * @param <T> The type of the elements to be sorted.
+     * @param o Object to extract value for comparison.
+     * @return Value used to compare.
      */
     public static <T> int extract(T o) {
         if (o instanceof Sortable) {
@@ -34,6 +38,9 @@ public class Sortables {
 
     /**
      * Returns a comparator.
+     *
+     * @param <T> The type of the elements to be sorted.
+     * @return Comparator to be used for sorting.
      */
     public static <T> Comparator<T> comparator() {
         return new Comparator<T>() {
@@ -46,6 +53,9 @@ public class Sortables {
 
     /**
      * Sorts list of object using Sortable interface and Sort annotation.
+     *
+     * @param <T> The type of the elements to be sorted.
+     * @param list List to be sorted.
      */
     public static <T> void sort(List<T> list) {
         Collections.sort(list, comparator());

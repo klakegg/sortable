@@ -9,13 +9,13 @@ This project aims to solve my tiny itch of sorting in Java. Sorting i Java is no
 ## Using Sortable
 
 ```java
-// Implementation using the annotation
+// Implementation using annotation
 @Sort(1)
 class MyFirstClass {
 
 }
 
-// Implementation using the interface
+// Implementation using interface
 class MySecondClass implements Sortable {
 
     @Override
@@ -24,17 +24,17 @@ class MySecondClass implements Sortable {
     }
 }
 
-// Adding objects to a list:
+// Creating a list of objects
 List<Object> list = new ArrayList<>();
 list.add(new MySecondClass());
 list.add(new MyFirstClass());
 list.add("String object.");
 
-// Sorting in Java 7:
+// Sorting in Java 7
 Sortables.sort(list);
 Collections.sort(list, Sortables.comparator());
 
-// Sorting in Java 8:
+// Sorting in Java 8
 list.sort(Sortables.comparator());
 list.sort(comparing(Sortables::extract));
 
