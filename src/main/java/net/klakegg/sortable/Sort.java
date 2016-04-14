@@ -1,4 +1,4 @@
-package net.klakegg.commons.sortable;
+package net.klakegg.sortable;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

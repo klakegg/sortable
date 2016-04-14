@@ -1,4 +1,4 @@
 /**
  * Implementation of Sortable.
  */
-package net.klakegg.commons.sortable;
+package net.klakegg.sortable;

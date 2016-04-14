@@ -1,4 +1,4 @@
-package net.klakegg.commons.sortable;
+package net.klakegg.sortable;
 
 /**
  * Interface for returning a value used for comparison.
