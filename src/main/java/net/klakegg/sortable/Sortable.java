@@ -6,7 +6,8 @@ package net.klakegg.sortable;
 public interface Sortable {
 
     /**
-     * Return value used to compare, return Integer.MIN_VALUE to ignore returned value.
+     * Return value used to compare, return Integer.MIN_VALUE to ignore
+     * returned value.
      *
      * @return Value used to compare.
      */

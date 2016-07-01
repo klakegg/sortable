@@ -5,7 +5,8 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Class containing methods to make Sortable interface and Sort annotation useful.
+ * Class containing methods to make Sortable interface and Sort
+ * annotation useful.
  */
 public class Sortables {
 
@@ -14,7 +15,8 @@ public class Sortables {
      * <p>
      * Priority:
      * <ul>
-     *  <li>Implementation of Sortable if value higher than Integer.MIN_VALUE is returned.</li>
+     *  <li>Implementation of Sortable if value higher than Integer.MIN_VALUE
+     *      is returned.</li>
      *  <li>Annotation of Sort.</li>
      *  <li>Returns 0.</li>
      * </ul>
